@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FCFC249-DF8E-4D0B-B9C6-F0F3678487D2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bootstrap-3.3.4-dist\css\bootstrap-theme.css.map" />
+    <None Include="bootstrap-3.3.4-dist\css\bootstrap.css.map" />
+    <None Include="bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="bootstrap-custom\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="bootstrap-custom\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="bootstrap-custom\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about_page.html" />
+    <Content Include="blog.css" />
+    <Content Include="bootstrap-3.3.4-dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap-3.3.4-dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap-3.3.4-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-3.3.4-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-3.3.4-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-3.3.4-dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap-3.3.4-dist\js\npm.js" />
+    <Content Include="bootstrap-custom\css\custom.bootstrap.css" />
+    <Content Include="bootstrap-custom\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-custom\js\bootstrap.js" />
+    <Content Include="bootstrap-custom\js\bootstrap.min.js" />
+    <Content Include="contact_page.html" />
+    <Content Include="index.html" />
+    <Content Include="jquery.min.js" />
+    <Content Include="Single_blog_page.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

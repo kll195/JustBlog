@@ -1,0 +1,60 @@
+﻿@using System
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/css")
+    @Styles.Render("~/Content/themes/simple/css")
+    @Scripts.Render("~/jquery", "~/jqueryval", "~/jqueryunobtrusiveval", "~/js")
+</head>
+
+<body>
+    <div id="main">
+
+        <!-- Header -->
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="/">Just<span class="logo_colour">Blog</span></a></h1>
+                    <h2>Writings, Experiments and More...</h2>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div id="menubar">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Posts", "Posts")</li>
+                    <li>@Html.ActionLink("Contact", "Contact")</li>
+                    <li>@Html.ActionLink("About Me", "AboutMe")</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Site Content -->
+        <div id="site_content">
+            <div class="feeddiv">
+                <a href="http://feeds.feedburner.com/justblog" title="Subscribe to my blog">Subscribe to my blog</a>
+            </div>
+            @Html.Partial("_Search")
+            <br/>
+            @RenderBody()
+            @*
+                Call the child action to render the sidebar
+            *@
+            @Html.Action("Sidebars")
+
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            Copyright © @DateTime.Now.Year JustBlog All Rights Reserved
+        </div>
+    </div>
+</body>
+</html>

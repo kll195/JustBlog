@@ -1,0 +1,35 @@
+﻿@model JustBlog.Models.ListViewModel
+ 
+<div id="content">
+ 
+  <h1>@ViewBag.Title</h1>
+ 
+  @Html.Partial("_Pager", Model)
+    
+  @if (Model.Posts.Count > 0)
+  {
+    foreach (var post in Model.Posts)
+    {
+      @Html.Partial("_PostTemplate", post)
+    }
+  }
+  else
+  {
+    <p>No posts found!</p>
+  }
+   
+  @Html.Partial("_Pager", Model)
+ 
+</div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "justblogdotcom";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
